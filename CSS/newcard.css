@@ -1,0 +1,114 @@
+.card-heading{
+    font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.card-container-wrapper {
+    position: relative;
+    width: 80%; /* Width to show only 4 cards including margins */
+    overflow: hidden; /* Hide overflow to prevent horizontal scroll bar */
+    margin: 0 auto; /* Center the container */
+  }
+  .card-container {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    padding: 10px;
+    border-radius: 50px;
+  }
+  .card {
+    width: 260px;
+    height: 200px;
+    margin: 10px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 25px;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    background-image: var(--background-image);
+  }
+  .scroll-button {
+    position: absolute;
+    top: 47%;
+    transform: translateY(-50%);
+    background-color: coral;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 6px 13px;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 700;
+    margin: 0px 5px;
+  }
+  .scroll-button.left {
+    left: 0;
+  }
+  .scroll-button.right {
+    right: 0;
+  }
+  .card-content {
+    position: absolute;
+    bottom: -50px; /* Initially hide the text and button */
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: bottom 0.3s ease-in-out; /* Add transition effect */
+  }
+  .card:hover .card-content {
+    bottom: 40px; /* Slide up the text and button when hovering over the card */
+  }
+
+  .card:hover {
+    filter: brightness(70%);
+    transition: all 0.5s ease;
+  }
+  .card-text {
+    margin: 0 0 10px;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .card-button {
+    background-color: coral;
+    border: none;
+    color: white;
+    font-size: 17px;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+
+  /*--------------- Card Reveal ----------------------*/
+
+  .reveal
+  {
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 2s ease;
+  }
+
+  .reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+  }
