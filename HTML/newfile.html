@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../CSS/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../CSS/swiper-bundle.min.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -12,41 +12,177 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-</head>
-<body>
+    <link rel="stylesheet" href="../CSS/Homepage.css" />
+    <link rel="stylesheet" href="../CSS/Navigationbar2.css" />
+    <link rel="stylesheet" href="../CSS/slider.css">
+    <link rel="stylesheet" href="../CSS/newcard.css">
+  </head>
+  <body>
     <header>
-        <div class="offer-ribbon">
-            <p class="offer-all">
-              <span class="offer-name">Summar Offer!!!!</span>
-              <span class="offer-des">40% off on all the Family Packages</span>
-            </p>
-          </div>
-          <nav>
-            <a class="home-link" href="#"><img src="../Imgs/travel-logo-removebg-preview.png"></a> 
-            <input type="checkbox" id="sidebar-active">
-            <label for="sidebar-active" class="open-sidebar-button">
-              <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
-            </label>
-            <label id="overlay" for="sidebar-active"></label>
-            <div class="links-container">
-              <label for="sidebar-active" class="close-sidebar-button">
-                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-              </label>
-        
-              <!-- NOT IN TUTORIAL: The <a> tags are linked to the subpages -->
-                <ul>
-              <li>Best of the Season</li>
-              <li>Explore Destinations</li>
-              <li>Family Gateways</li>
-              <li>Exclusive Packages</li>
-              <!-- <li>
-                <input class="search-bar" /><button class="search-btn">
-                  Search
-                </button>
-              </li> -->
-                </ul>
-            </div>
-          </nav>
+      <div class="offer-ribbon">
+        <p class="offer-all">
+          <span class="offer-name">Summar Offer!!!!</span>
+          <span class="offer-des">40% off on all the Family Packages</span>
+        </p>
+      </div>
+      <nav>
+        <div class="wrapper">
+          <div class="logo"><a href="#">
+            <img src="../Imgs/travel-logo-removebg-preview.png" alt="">
+          </a></div>
+          <input type="radio" name="slider" id="menu-btn" />
+          <input type="radio" name="slider" id="close-btn" />
+          <ul class="nav-links">
+            <label for="close-btn" class="btn close-btn"
+              ><i class="fas fa-times"></i
+            ></label>
+            <li><a href="#">Home</a></li>
+            <li>
+              <a href="#" class="desktop-item">Dropdown Menu</a>
+              <input type="checkbox" id="showDrop" />
+              <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+              <ul class="drop-menu">
+                <li><a href="#">Drop menu 1</a></li>
+                <li><a href="#">Drop menu 2</a></li>
+                <li><a href="#">Drop menu 3</a></li>
+                <li><a href="#">Drop menu 4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="desktop-item">Mega Menu</a>
+              <input type="checkbox" id="showMega" />
+              <label for="showMega" class="mobile-item">Mega Menu</label>
+              <div class="mega-box">
+                <div class="content">
+                  <div class="row">
+                    <img
+                      src="../Imgs/img4.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="row">
+                    <header>Design Services</header>
+                    <ul class="mega-links">
+                      <li><a href="#">Graphics</a></li>
+                      <li><a href="#">Vectors</a></li>
+                      <li><a href="#">Business cards</a></li>
+                      <li><a href="#">Custom logo</a></li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <header>Email Services</header>
+                    <ul class="mega-links">
+                      <li><a href="#">Personal Email</a></li>
+                      <li><a href="#">Business Email</a></li>
+                      <li><a href="#">Mobile Email</a></li>
+                      <li><a href="#">Web Marketing</a></li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <header>Security services</header>
+                    <ul class="mega-links">
+                      <li><a href="#">Site Seal</a></li>
+                      <li><a href="#">VPS Hosting</a></li>
+                      <li><a href="#">Privacy Seal</a></li>
+                      <li><a href="#">Website design</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+          <label for="menu-btn" class="btn menu-btn"
+            ><i class="fas fa-bars"></i
+          ></label>
+        </div>
+      </nav>
     </header>
-</body>
+    <main>
+      <section class="Carousel-section">
+        <div class="MainSlider">
+          <img src="../Imgs/chevron-left-solid.svg" class="arrow left" />
+          <div class="frame">
+            <div class="slider">
+              <img src="../Imgs/img1.jpg" id="slide-1" class="image"/>
+              <img src="../Imgs/img2.jpg" id="slide-2" class="image"/>
+              <img src="../Imgs/img3.jpg" id="slide-3" class="image"/>
+              <img src="../Imgs/img4.jpg" id="slide-4" class="image"/>
+              <img src="../Imgs/img5.jpg" id="slide-4" class="image"/>
+            </div>
+            <div class="slider-nav">
+              <!-- <div class="button"></div>
+              <div class="button"></div>
+              <div class="button"></div>
+              <div class="button"></div> -->
+            </div>
+          </div>
+          <img src="../Imgs/chevron-right-solid.svg" class="arrow right" />
+        </div>
+      </section>
+      <section class="mostpopularcards reveal">
+        <div>
+          <p class="card-heading">Most Popular Places</p>
+        </div>
+      <div class="card-container-wrapper">
+        <button class="scroll-button left" id="scrollLeftBtn">&#10094;</button>
+        <div class="card-container" id="cardContainer">
+          <div class="card">
+            <div class="card-content">
+              <div class="card-text">BALI</div>
+              <button class="card-button">Visit Plans</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <div class="card-text">AMERICA</div>
+              <button class="card-button">Visit Plans</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <div class="card-text">INDIA</div>
+              <button class="card-button">Visit Plans</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <div class="card-text">DUBAI</div>
+              <button class="card-button">Visit Plans</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <div class="card-text">EUROPE</div>
+              <button class="card-button">Visit Plans</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <div class="card-text">SINGAPOR</div>
+              <button class="card-button">Visit Plans</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <div class="card-text">AUSTRALIA</div>
+              <button class="card-button">Visit Plans</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <div class="card-text">AFRICA</div>
+              <button class="card-button">Visit Plans</button>
+            </div>
+          </div>
+        </div>
+        <button class="scroll-button right" id="scrollRightBtn">&#10095;</button>
+      </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="../JS/slider.js"></script>
+    <script src="../JS/newcard.js"></script>
+    <script src="../JS/revealevent.js"></script>
+  </body>
 </html>

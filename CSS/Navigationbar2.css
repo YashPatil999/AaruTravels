@@ -10,7 +10,7 @@ nav{
   z-index: 99;
   width: 100%;
   
-  background: #242526;
+  background: transparent;
 }
 nav .wrapper{
   position: relative;
@@ -270,4 +270,9 @@ nav input{
 .body-text div{
   font-size: 45px;
   font-weight: 600;
+}
+
+.logo img{
+  margin-top: 30px;
+  width: 15%;
 }
